@@ -39,4 +39,15 @@ public class mainTest {
         Assert.assertArrayEquals(expectedOutput, methodOutput);
     }
 
+
+    //countUrinal tests
+    @Test
+    void countUrinalsTest() throws IOException {
+        FindMaxFreeUrinals fmfu = new FindMaxFreeUrinals();
+        String[] array = fmfu.openFile("input.dat");
+        int[] methodop = fmfu.getCharArray(array);
+        int[] expectedop = {1, 0, 3, 2, -1, -1, -1, -1};
+        Assert.assertArrayEquals(expectedop, methodop);
+    }
+
 }
