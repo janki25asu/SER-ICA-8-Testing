@@ -2,11 +2,13 @@ import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import java.io.IOException;
 
 public class mainTest {
 
+    //File doesn't exist
     @Test
-    void incorrectInputShouldReturnMinusOne(){
+    void FileNotFoundExceptionTest(){
 
         FindMaxFreeUrinals fmfu = new FindMaxFreeUrinals();
         assertThrows(FileNotFoundException.class,
@@ -14,4 +16,16 @@ public class mainTest {
             fmfu.openFile("input1.dat");
                 });
     }
+
+    //IOException
+    @Test
+    void IOExceptionTest(){
+
+        FindMaxFreeUrinals fmfu = new FindMaxFreeUrinals();
+        assertThrows(IOException.class,
+                () -> {
+                    fmfu.openFile("input1.dat");
+                });
+    }
+
 }
