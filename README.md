@@ -19,8 +19,8 @@ counter to rule1.txt, rule2.txt, etc.
   
   
 ### Examples 
-10001  returns 1 (10101) 
-1001  returns 0 (1001) 
-00000  returns 3 (10101) 
-0000  returns 2 (1001) 
-01000  returns 1 (01010 or 01001) 
+10001  returns 1 (10101)    <br>
+1001  returns 0 (1001)    <br>  
+00000  returns 3 (10101)      <br>
+0000  returns 2 (1001)      <br>
+01000  returns 1 (01010 or 01001)     <br> 
