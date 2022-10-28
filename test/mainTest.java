@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import org.junit.Assert;
 import static org.junit.jupiter.api.Assertions.*;
@@ -47,6 +48,18 @@ public class mainTest {
         String[] array = fmfu.openFile("input.dat");
         int[] methodop = fmfu.getCharArray(array);
         int[] expectedop = {1, 0, 3, 2, -1, -1, -1, -1};
+        Assert.assertArrayEquals(expectedop, methodop);
+    }
+
+
+    //this test case is made to show fail test case
+    @Test
+    void failedTest() throws IOException {
+        System.out.println("====== Janki Padiya == TEST failedTest EXECUTED =======");
+        FindMaxFreeUrinals fmfu = new FindMaxFreeUrinals();
+        String[] array = fmfu.openFile("input.dat");
+        int[] methodop = fmfu.getCharArray(array);
+        int[] expectedop = {1, 0, 3, 2, -1, -1, -1, -1, -1, -1};
         Assert.assertArrayEquals(expectedop, methodop);
     }
 
